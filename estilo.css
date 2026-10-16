@@ -1,0 +1,147 @@
+/* Web de Mis Ubicaciones: solo HTML y CSS, sin fuentes, scripts ni analítica externos. */
+:root {
+  color-scheme: light dark;
+  --fondo: #f2f2f7;
+  --superficie: #ffffff;
+  --texto: #111114;
+  --secundario: #5c5c66;
+  --borde: rgba(60, 60, 67, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #000000;
+    --superficie: #1c1c1e;
+    --texto: #f4f4f6;
+    --secundario: #a1a1aa;
+    --borde: rgba(84, 84, 88, 0.6);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.app img {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+}
+
+.app span {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 24px 0 4px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 32px 0 8px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 20px 0 4px;
+}
+
+.nota {
+  color: var(--secundario);
+  font-size: 15px;
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border-radius: 16px;
+  padding: 2px 18px;
+  margin: 16px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+nav.pie {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--borde);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 15px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12.5px;
+  line-height: 1.45;
+  background: var(--superficie);
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+details {
+  background: var(--superficie);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 8px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
